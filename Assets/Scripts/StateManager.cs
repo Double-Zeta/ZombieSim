@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class StateManager : MonoBehaviour
 {
+    public NavMeshAgent ZombieAgent;
     public State currentState;
     void Update()
     {
         RunStateMachine();
+        ZombieAgent.SetDestination(currentState.DesiredPosition);
+        
     }
 
     private void RunStateMachine()
