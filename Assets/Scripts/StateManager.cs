@@ -7,7 +7,6 @@ public class StateManager : MonoBehaviour
 {
     public NavMeshAgent ZombieAgent;
     public State currentState;
-    public GameObject detectionRadius;
     void Update()
     {
         RunStateMachine();
