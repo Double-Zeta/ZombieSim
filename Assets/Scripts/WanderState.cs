@@ -20,7 +20,13 @@ public class WanderState : State
             {
                 MinRange = new Vector3(-10,0,-10);
                 MaxRange = new Vector3(10, 0, 10);
-                DesiredPosition = Random.Range(MinRange, MaxRange);
+
+                float x = Random.Range(MinRange.x, MaxRange.x);
+                float y = Random.Range(MinRange.y, MaxRange.y); 
+                float z = Random.Range(MinRange.z, MaxRange.z);
+
+                DesiredPosition = new Vector3(x, y, z);
+                
                 return this;
             }
         }

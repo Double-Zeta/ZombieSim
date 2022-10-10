@@ -6,6 +6,7 @@ public class ChaseState : State
 {
     public AttackState attackState;
     public bool isInAttackRange;
+    public GameObject target;
     public override State RunCurrentState()
     {
         if (isInAttackRange)
@@ -14,6 +15,7 @@ public class ChaseState : State
         }
         else
         {
+            DesiredPosition = -target.transform.position;
             return this;
         }
     }
