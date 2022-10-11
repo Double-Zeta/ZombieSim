@@ -15,7 +15,7 @@ public class ChaseState : State
         }
         else
         {
-            DesiredPosition = -target.transform.position;
+            DesiredPosition = target.transform.position;
             return this;
         }
     }
